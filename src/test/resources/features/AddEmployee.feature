@@ -1,0 +1,36 @@
+@addEmployee
+Feature: Add Employee
+
+  Background: 
+    When login with valid credentials
+    Then navigate to add employee page
+
+  Scenario: Add employee by first name and last name but without middle nmae
+    And enter first and last name
+    Then click on sace Button
+    And verify the employee is added successfully
+
+  Scenario: Add employee with login credentials
+    And enter first and last name
+    When check login details checkbox
+    Then enter login details
+    Then click on sace Button
+    And verify the employee is added successfully
+
+  @parameter
+  Scenario: Add employee without login details but with middle name
+    When enter first name as "Ahmet" middle name as "Can" and last name as "Bicer"
+    Then click on sace Button
+    And verify that "Ahmet Can Bicer" is added successfully
+@examples
+  Scenario Outline: Adding multiple employees without login details
+    When enter empoyee "<First Name>", "<Middle Name>" and "<Last Name>"
+    Then click on sace Button
+    And verify that "<First Name>", "<Middle Name>" and "<Last Name>" is successfully added
+
+    Examples: 
+      | First Name | Middle Name | Last Name |
+      | Mark       | J           | Smith     |
+      | Hunter     | ABC         | Musoev    |
+      | John       | M           | Wick      |
+      | John       | F           | Kennedy   |
