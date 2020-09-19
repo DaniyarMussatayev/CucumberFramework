@@ -12,12 +12,14 @@ Then verify the dashboard logo is displayed
 #valid username and empty password --> Password cannot be empty
 #valid username and invalid password --> Invalid credentials
 
+@HWClass01
 Scenario: Login with empty username
 #Given go to HRMS login page 
 When login without username 
 Then verify the error message 
 #And quit the browser 
 
+@HWClass01
 Scenario: Login with empty password
 #Given go to HRMS login page 
 When login without password 

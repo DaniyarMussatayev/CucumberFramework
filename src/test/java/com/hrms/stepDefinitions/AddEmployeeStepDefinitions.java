@@ -41,7 +41,7 @@ public class AddEmployeeStepDefinitions extends CommonMethods {
 	}
 
 	@Then("click on save Button")
-	public void click_on_sace_Button() {
+	public void click_on_save_Button() {
 		click(addEmp.saveButton);
 	}
 

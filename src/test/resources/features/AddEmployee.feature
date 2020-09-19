@@ -9,14 +9,14 @@ Feature: Add Employee
     When login with valid credentials
     Then navigate to add employee page
 
-  @HW
+  @HWClass02
   Scenario: Add employee without login details
     #When login with valid credentials
     #Then navigate to add employee page
     Then add  first name and last name
     And verify the HW employee is added successfully
 
-  @HW
+  @HWClass02
   Scenario: Add employee with login details
     #When login with valid credentials
     #Then navigate to add employee page
@@ -45,7 +45,7 @@ Feature: Add Employee
   @examples
   Scenario Outline: Adding multiple employees without login details
     When enter empoyee "<First Name>", "<Middle Name>" and "<Last Name>"
-    Then click on sace Button
+    Then click on save Button
     And verify that "<First Name>", "<Middle Name>" and "<Last Name>" is successfully added
 
     Examples: 
@@ -64,7 +64,6 @@ Feature: Add Employee
       | John       | M           | Wick      | bvcvxsdf    |
       | John       | F           | Kennedy   | sdfsdgsdgs  |
 
-@excelTask
+  @excelTask
   Scenario: Adding multiple employees from excel file
-  When add multiple employees from "AddEmployee" verify they are added successfully
-  
+    When add multiple employees from "AddEmployee" verify they are added successfully

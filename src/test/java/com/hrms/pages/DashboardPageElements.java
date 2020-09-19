@@ -15,7 +15,7 @@ public class DashboardPageElements extends BaseClass {
 
 	@FindBy(id = "menu_admin_viewAdminModule")
 	public WebElement adminLinkBtn;
-	
+
 	@FindBy(id = "menu_leave_viewLeaveModule")
 	public WebElement leaveLinkBtn;
 
@@ -30,12 +30,15 @@ public class DashboardPageElements extends BaseClass {
 
 	@FindBy(id = "menu_directory_viewDirectory")
 	public WebElement directoryLinkBtn;
-	
+
 	@FindBy(css = "a#welcome")
 	public WebElement welcome;
-	
+
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmpBtn;
+
+	@FindBy(id = "menu_pim_viewEmployeeList")
+	public WebElement empList;
 
 	@FindBy(xpath = "//div[@class= 'menu']/ul/li")
 	public List<WebElement> dashTabs;
