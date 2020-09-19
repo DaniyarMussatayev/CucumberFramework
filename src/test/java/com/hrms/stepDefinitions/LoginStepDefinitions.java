@@ -27,6 +27,19 @@ public class LoginStepDefinitions extends CommonMethods{
 	public void verify_the_dashboard_logo_is_displayed() {
 	    Assert.assertTrue(dash.welcome.isDisplayed());
 	}
+	
+	@When("login without username")
+	public void login_without_username() {
+		sendText(login.passwordTextBox, ConfigsReader.getPropValue("password"));
+		click(login.btnLogin);
+	}
+	
+	@When("login without password")
+	public void login_without_password() {
+		sendText(login.userNametextBox, ConfigsReader.getPropValue("username"));
+		click(login.btnLogin);
+
+	}
 
 //	@Then("quit the browser")
 //	public void quit_the_browser() {
