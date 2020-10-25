@@ -1,115 +1,87 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/nameValidationInDB.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/APIWorkflow.feature");
 formatter.feature({
-  "name": "Name validations aginst DB",
+  "name": "Syntax HRMS API Workflow",
+  "description": "  Description: this feature file test Syntax HRMS API Workflow",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@APIworkflow"
+    }
+  ]
+});
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "a JWT is generated",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.hrms.API.Final.steps.GenerateTokenSteps.a_JWT_is_generated()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.scenario({
-  "name": "First name validation against DB - searching by Employee ID",
+  "name": "Creating an employee",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@dbValidation"
+      "name": "@APIworkflow"
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
-  "name": "login with valid credentials",
-  "keyword": "When "
+  "name": "a request is prepared to create an employee",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.login_with_valid_credentials()"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.a_request_is_prepared_to_create_an_employee()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify the dashboard logo is displayed",
+  "name": "a POST call is made to create an employee",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.a_POST_call_is_made_to_create_an_employee()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the status code for creating an employee is 201",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.verify_the_dashboard_logo_is_displayed()"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_creating_an_employee_is(java.lang.Integer)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "navigate to employees list",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.navigate_to_employees_list()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "enter valid Employee id \"0056266\"",
+  "name": "the employee is created",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.enter_valid_Employee_id(java.lang.String)"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_is_created()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on searchs Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.click_on_searchs_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify the table is displayed",
+  "name": "the employee ID is stored as a global variable to be used for other calls",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.verify_the_table_is_displayed()"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "get first name from the table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.get_first_name_from_the_table()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "get first name from the db",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.stepDefinitions.DBStepDefinitions.get_first_name_from_the_db()"
-});
-formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.hrms.utils.DBUtils.storeDataFromDB(DBUtils.java:41)\r\n\tat com.hrms.stepDefinitions.DBStepDefinitions.get_first_name_from_the_db(DBStepDefinitions.java:18)\r\n\tat ✽.get first name from the db(file:///C:/Users/User/eclipse-workspace/CucumberFramework/src/test/resources/features/nameValidationInDB.feature:12)\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "validate first name from ui against db",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.stepDefinitions.EmployeeSearchStepDefinitions.validate_first_name_from_ui_against_db()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded0.png", "First name validation against DB - searching by Employee ID");
-formatter.after({
   "status": "passed"
 });
 });
