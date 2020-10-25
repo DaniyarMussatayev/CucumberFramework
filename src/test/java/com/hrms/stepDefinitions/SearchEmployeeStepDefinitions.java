@@ -54,13 +54,13 @@ public class SearchEmployeeStepDefinitions extends CommonMethods {
 	    Assert.assertEquals(empId, empList.employeeIdResultTable.getText());
 	}
 
-//	@Then("verify that {string}, {string}, {string} is successfully added")
-//	public void verify_that_is_successfully_added(String firstName, String middleName, String lastName) {
-//		waitForVisability(empList.employeeNameResultTable);
-//	   String expecetedFullName=firstName + " " + middleName + " " + lastName;
-//	   String actualFullName=empList.employeeNameResultTable.getText()+ " " +empList.employeeLastNameResultTable.getText();
-//	   Assert.assertEquals(expecetedFullName, actualFullName);
-//	} !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! I made this comments because i put List<WebElemet> in page SearchEmployeeElemenst for SQL project, previosly was just Web element
+	@Then("verify that {string}, {string}, {string} is successfully added")
+	public void verify_that_is_successfully_added(String firstName, String middleName, String lastName) {
+		waitForVisability(empList.employeeNameResultTable);
+	   String expecetedFullName=firstName + " " + middleName + " " + lastName;
+	   String actualFullName=empList.employeeNameResultTable.getText()+ " " +empList.employeeLastNameResultTable.getText();
+	   Assert.assertEquals(expecetedFullName, actualFullName);
+	} 
 
 
 }

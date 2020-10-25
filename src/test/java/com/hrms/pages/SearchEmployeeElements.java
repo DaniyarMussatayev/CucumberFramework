@@ -25,29 +25,16 @@ public class SearchEmployeeElements extends BaseClass {
 	public WebElement employeeIdResultTable;
 	
 	@FindBy(xpath = "//table[@id = 'resultTable']/tbody/tr/td[3]")
-	public List<WebElement> employeeNameResultTable; //We changed to List<WebElement> for SQL project, previosly was just WebElement!!!!!!!!!!!!!!!
+	public WebElement employeeNameResultTable; 
 	
 	@FindBy(xpath = "//table[@id = 'resultTable']/tbody/tr/td[4]")
 	public WebElement employeeLastNameResultTable;
 	
-	@FindBy(xpath ="//table[@id = 'resultTable']")
-	public WebElement resultTable;
+
 	
-	public boolean isTableDisplayed() {
-		return resultTable.isDisplayed();
+
 		
-	}
-	
-	public List<Map<String, String>> getFirstNameFromTable(){
-		List<Map<String, String>> uiFirstNames = new ArrayList<>();
-		for(WebElement firstNameRow: employeeNameResultTable) {
-			Map<String, String> mapData = new LinkedHashMap<>();
-			String tableName = firstNameRow.getText();
-			mapData.put("emp_firstname", tableName);
-			uiFirstNames.add(mapData);
-		}
-		return uiFirstNames;
-	}
+
 	
 
 	public SearchEmployeeElements() {
