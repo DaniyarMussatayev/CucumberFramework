@@ -1,13 +1,8 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/APIWorkflow.feature");
 formatter.feature({
   "name": "Syntax HRMS API Workflow",
-  "description": "  Description: this feature file test Syntax HRMS API Workflow",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@APIworkflow"
-    }
-  ]
+  "description": "  Description: This feature file tests Syntax HRMS API Workflow",
+  "keyword": "Feature"
 });
 formatter.background({
   "name": "",
@@ -59,27 +54,27 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_creating_an_employee_is(java.lang.Integer)"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_creating_an_employee_is(int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the employee is created",
+  "name": "the employee is created contains key \"Message\" and value \"Entry Created\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_is_created()"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_is_created_contains_key_and_value(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the employee ID is stored as a global variable to be used for other calls",
+  "name": "the employee ID \"Employee[0].employee_id\" is stored as a global variable to be used for other calls",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls()"
+  "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
