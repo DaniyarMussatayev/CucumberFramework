@@ -17,7 +17,6 @@ import io.cucumber.junit.CucumberOptions;
                            "rerun:target/FailedTest.txt", //generates a txt file only with failed test
                            "json:target/cucumber.json"} //generates a json reports
 ) 
-
 public class APIRunner {
 
 }

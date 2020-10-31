@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2393000000,
+              "duration": 3202000000,
               "status": "passed"
             },
             "line": 7,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-10-28T02:19:20.089Z",
+        "start_timestamp": "2020-10-31T14:00:48.999Z",
         "line": 10,
         "name": "Creating an employee",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20000000,
+              "duration": 4000000,
               "status": "passed"
             },
             "line": 11,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 534000000,
+              "duration": 451000000,
               "status": "passed"
             },
             "line": 12,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 25000000,
+              "duration": 47000000,
               "status": "passed"
             },
             "line": 13,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 66000000,
+              "duration": 83000000,
               "status": "passed"
             },
             "line": 14,
@@ -98,7 +98,7 @@
           },
           {
             "result": {
-              "duration": 47000000,
+              "duration": 66000000,
               "status": "passed"
             },
             "line": 15,
@@ -112,6 +112,149 @@
               ],
               "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls(java.lang.String)"
             },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APIworkflow"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 419000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "com.hrms.API.Final.steps.GenerateTokenSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-31T14:00:52.938Z",
+        "line": 18,
+        "name": "Retrieving created employee",
+        "description": "",
+        "id": "syntax-hrms-api-workflow;retrieving-created-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "a request is prepared to retrieve the created employee",
+            "match": {
+              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_request_is_prepared_to_retrieve_the_created_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 516000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a GET call is made to retrieve the created employee",
+            "match": {
+              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_GET_call_is_made_to_retrieve_the_created_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the status code for retrieving the created employee is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 55
+                }
+              ],
+              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_retrieving_the_created_employee_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the retrieved employee ID \"employee[0].employee_id\" matches the globally stored employee ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee[0].employee_id\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_retrieved_employee_ID_matches_the_globally_stored_employee_ID(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the retrieved data at \"employee\" matches the data used to create an employee with employee ID \"employee[0].employee_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"employee[0].employee_id\"",
+                  "offset": 94
+                }
+              ],
+              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_retrieved_data_at_matches_the_data_used_to_create_an_employee_with_employee_ID(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "emp_firstname",
+                  "emp_middle_name",
+                  "emp_lastname",
+                  "emp_birthday",
+                  "emp_gender",
+                  "emp_job_title",
+                  "emp_status"
+                ]
+              },
+              {
+                "cells": [
+                  "Syntax",
+                  "ABC",
+                  "Batch7",
+                  "2000-10-11",
+                  "Male",
+                  "IT Analyst",
+                  "Employee"
+                ]
+              }
+            ],
             "keyword": "And "
           }
         ],

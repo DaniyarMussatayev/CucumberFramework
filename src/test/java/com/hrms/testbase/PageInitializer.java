@@ -6,6 +6,7 @@ import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
 import com.hrms.pages.SearchEmployeeElements;
 import com.hrms.pages.ViewEmployeePageElements;
+import com.hrms.utils.APICommonMethods;
 
 public class PageInitializer extends BaseClass{
 
@@ -15,6 +16,7 @@ public class PageInitializer extends BaseClass{
 	protected static SearchEmployeeElements empList;
 	protected static PersonalDetailsPageElements persDetails;
 	protected static ViewEmployeePageElements viewEmp;
+	protected static APICommonMethods apiMethods;
 
 
 	public static void initializePageObjects() {
@@ -24,6 +26,7 @@ public class PageInitializer extends BaseClass{
 		empList = new SearchEmployeeElements();
 		persDetails=new PersonalDetailsPageElements();
 		viewEmp = new ViewEmployeePageElements();
+		apiMethods = new APICommonMethods();
 
 	}
 }
