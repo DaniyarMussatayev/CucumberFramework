@@ -103,7 +103,7 @@
 				<configuration>
 					<includes>
 						<include>
-							**/*TestRunner.java</include>
+							**/*APIRunner.java</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
@@ -129,7 +129,7 @@
 							<inputDirectory>${project.build.directory}</inputDirectory>
 							<jsonFiles>
 								<!-- supports wildcard or name pattern -->
-								<param>**/*.json</param>
+								<param>**/*cucumber.json</param>
 							</jsonFiles>
 
 						</configuration>

@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
                  glue = "com/hrms/API/Final/steps", //we need to glue our step definition - implementation
                  dryRun = false, //when set as true, will run over the feature steps and identify the missing implementation
                  monochrome = true, //when set as true, will format the console outcome
-                 tags = "@APIworkflow",
+                 tags = "@CreateEmployees",
                  strict = false, //when set as true, will fail the execution when undefined step is found
                  plugin = {"pretty",  //will print steps inside the console
                            "html:target/cucumber-default-report", //generates default html report

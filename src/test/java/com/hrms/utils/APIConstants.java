@@ -19,4 +19,6 @@ public class APIConstants {
 	public static final String CREATE_EMPLOYEE_JSON = System.getProperty("user.dir")
 			+ "/src/test/resources/JSONFiles/createEmployee.json";
 	
+	public static final String GENERATE_TOKEN_JSON = System.getProperty("user.dir")
+			+ "/src/test/resources/JSONFiles/generateToken.json";
 }

@@ -1,9 +1,9 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3202000000,
+              "duration": 2428000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "a JWT is generated",
             "match": {
               "location": "com.hrms.API.Final.steps.GenerateTokenSteps.a_JWT_is_generated()"
@@ -24,105 +24,190 @@
         ]
       },
       {
-        "start_timestamp": "2020-10-31T14:00:48.999Z",
-        "line": 10,
-        "name": "Creating an employee",
+        "start_timestamp": "2020-10-31T17:49:28.277Z",
+        "line": 17,
+        "name": "Creating employees",
         "description": "",
-        "id": "syntax-hrms-api-workflow;creating-an-employee",
+        "id": "creating-employees;creating-employees;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4000000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "a request is prepared to create an employee",
+            "line": 10,
+            "name": "a request is prepared to create employees",
             "match": {
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_request_is_prepared_to_create_an_employee()"
+              "location": "com.hrms.API.Final.steps.CreateEmployees.a_request_is_prepared_to_create_employees()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 451000000,
+              "duration": 6000000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "a POST call is made to create an employee",
+            "line": 11,
+            "name": "employee data provided is \"Bob\", \"Bob\", \"Bob\",\"M\",\"2000-07-11\",\"Employee\",\"Cloud Architect\"",
             "match": {
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_POST_call_is_made_to_create_an_employee()"
+              "arguments": [
+                {
+                  "val": "\"Bob\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Bob\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Bob\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"M\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"2000-07-11\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"Employee\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"Cloud Architect\"",
+                  "offset": 74
+                }
+              ],
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employee_data_provided_is(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 47000000,
+              "duration": 447000000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "the status code for creating an employee is 201",
+            "line": 12,
+            "name": "employees are created",
             "match": {
-              "arguments": [
-                {
-                  "val": "201",
-                  "offset": 44
-                }
-              ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_creating_an_employee_is(int)"
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employees_are_created()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 83000000,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "the employee is created contains key \"Message\" and value \"Entry Created\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Message\"",
-                  "offset": 37
-                },
-                {
-                  "val": "\"Entry Created\"",
-                  "offset": 57
-                }
-              ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_is_created_contains_key_and_value(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 66000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "the employee ID \"Employee[0].employee_id\" is stored as a global variable to be used for other calls",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Employee[0].employee_id\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_employee_ID_is_stored_as_a_global_variable_to_be_used_for_other_calls(java.lang.String)"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@APIworkflow"
+            "name": "@CreateEmployees"
           }
         ]
       },
       {
-        "line": 6,
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 444000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "com.hrms.API.Final.steps.GenerateTokenSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-31T17:49:31.242Z",
+        "line": 18,
+        "name": "Creating employees",
+        "description": "",
+        "id": "creating-employees;creating-employees;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a request is prepared to create employees",
+            "match": {
+              "location": "com.hrms.API.Final.steps.CreateEmployees.a_request_is_prepared_to_create_employees()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "employee data provided is \"Gozde\", \"Gozde\", \"Gozde\",\"F\",\"2000-07-11\",\"Independent contractor\",\"API Tester\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Gozde\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Gozde\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"Gozde\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 52
+                },
+                {
+                  "val": "\"2000-07-11\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"Independent contractor\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"API Tester\"",
+                  "offset": 94
+                }
+              ],
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employee_data_provided_is(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 431000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "employees are created",
+            "match": {
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employees_are_created()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateEmployees"
+          }
+        ]
+      },
+      {
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -133,7 +218,7 @@
               "duration": 419000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "a JWT is generated",
             "match": {
               "location": "com.hrms.API.Final.steps.GenerateTokenSteps.a_JWT_is_generated()"
@@ -143,133 +228,102 @@
         ]
       },
       {
-        "start_timestamp": "2020-10-31T14:00:52.938Z",
-        "line": 18,
-        "name": "Retrieving created employee",
+        "start_timestamp": "2020-10-31T17:49:32.125Z",
+        "line": 19,
+        "name": "Creating employees",
         "description": "",
-        "id": "syntax-hrms-api-workflow;retrieving-created-employee",
+        "id": "creating-employees;creating-employees;;4",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 8000000,
+              "duration": 1000000,
               "status": "passed"
             },
-            "line": 19,
-            "name": "a request is prepared to retrieve the created employee",
+            "line": 10,
+            "name": "a request is prepared to create employees",
             "match": {
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_request_is_prepared_to_retrieve_the_created_employee()"
+              "location": "com.hrms.API.Final.steps.CreateEmployees.a_request_is_prepared_to_create_employees()"
             },
             "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 516000000,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "a GET call is made to retrieve the created employee",
-            "match": {
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.a_GET_call_is_made_to_retrieve_the_created_employee()"
-            },
-            "keyword": "When "
           },
           {
             "result": {
               "duration": 1000000,
               "status": "passed"
             },
-            "line": 21,
-            "name": "the status code for retrieving the created employee is 200",
+            "line": 11,
+            "name": "employee data provided is \"Irma\", \"Irma\", \"Irma\",\"F\",\"2000-07-11\",\"Super Contractor\",\"CEO\"",
             "match": {
               "arguments": [
                 {
-                  "val": "200",
-                  "offset": 55
-                }
-              ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_status_code_for_retrieving_the_created_employee_is(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 18000000,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "the retrieved employee ID \"employee[0].employee_id\" matches the globally stored employee ID",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"employee[0].employee_id\"",
+                  "val": "\"Irma\"",
                   "offset": 26
-                }
-              ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_retrieved_employee_ID_matches_the_globally_stored_employee_ID(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 33000000,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "the retrieved data at \"employee\" matches the data used to create an employee with employee ID \"employee[0].employee_id\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"employee\"",
-                  "offset": 22
                 },
                 {
-                  "val": "\"employee[0].employee_id\"",
-                  "offset": 94
+                  "val": "\"Irma\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Irma\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"2000-07-11\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"Super Contractor\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"CEO\"",
+                  "offset": 85
                 }
               ],
-              "location": "com.hrms.API.Final.steps.APIFinalSteps.the_retrieved_data_at_matches_the_data_used_to_create_an_employee_with_employee_ID(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)"
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employee_data_provided_is(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
-            "rows": [
-              {
-                "cells": [
-                  "emp_firstname",
-                  "emp_middle_name",
-                  "emp_lastname",
-                  "emp_birthday",
-                  "emp_gender",
-                  "emp_job_title",
-                  "emp_status"
-                ]
-              },
-              {
-                "cells": [
-                  "Syntax",
-                  "ABC",
-                  "Batch7",
-                  "2000-10-11",
-                  "Male",
-                  "IT Analyst",
-                  "Employee"
-                ]
-              }
-            ],
-            "keyword": "And "
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 423000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "employees are created",
+            "match": {
+              "location": "com.hrms.API.Final.steps.CreateEmployees.employees_are_created()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@APIworkflow"
+            "name": "@CreateEmployees"
           }
         ]
       }
     ],
-    "name": "Syntax HRMS API Workflow",
-    "description": "  Description: This feature file tests Syntax HRMS API Workflow",
-    "id": "syntax-hrms-api-workflow",
+    "name": "Creating Employees",
+    "description": "  Description: This feature creates employees",
+    "id": "creating-employees",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/APIWorkflow.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/createEmployees.feature",
+    "tags": [
+      {
+        "name": "@CreateEmployees",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
